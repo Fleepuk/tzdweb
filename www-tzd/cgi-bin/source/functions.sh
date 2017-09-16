@@ -146,6 +146,18 @@ update_managementhosts(){
 	done < $DATAPATH/tmp/management_clients
 }
 
+add_container_host(){
+	# $1=container
+	local CONTAINERNAME=$1
+	[[ "$(grep -e " ${CONTAINERNAME}$" /etc/docker_hosts)" == "" ]] && \
+	echo $(get_container_ip ${CONTAINERNAME}) ${CONTAINERNAME} >> /etc/docker_hosts && \
+	kill -HUP $(pgrep dnsmasq)
+}
+remove_container_host(){
+ 	sed -i "/ $1$/d" /etc/docker_hosts
+	kill -HUP $(pgrep dnsmasq)
+} 
+
 # REGISTRY MANAGEMENT
 
 add_registry(){
@@ -260,7 +272,7 @@ status() {
 client_status() {
 
 	unset PINGCOUNT
-	PINGCOUNT=$(ping -c 2 $1 |grep -c "ttl")
+	PINGCOUNT=$(ping -c 2 -w 1 $1 |grep -c "ttl")
 	if [[ $PINGCOUNT -eq 0 ]]
 	then
 		echo "offline"

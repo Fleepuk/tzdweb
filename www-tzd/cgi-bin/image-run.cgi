@@ -1,7 +1,7 @@
 #!/bin/bash
 . bin/image_array.sh
 cat base/header 
-cat base/nav|sed "s/yellow screen2/green/g"
+cat base/nav|sed "s/calm screen2/dcalm/g"
 
 
 echo "<table align=\"center\" width=\"100%\"><tr><td colspan=\"4\" align=\"center\" class=\"p\">Run Image(s) to create running containers.</td></tr><tr></tr>"

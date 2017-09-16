@@ -3,7 +3,7 @@
 source source/functions.sh
 . tmp/globals
 cat base/header 
-cat base/nav|sed "s/screen4/green/g"
+cat base/nav|sed "s/calm screen4/dcalm/g"
 cat base/advanced|sed "s/green build/yellow build/g"
 if [[ "$REQUEST_METHOD" == "POST" ]]
 then

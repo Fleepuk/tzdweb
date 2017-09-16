@@ -5,7 +5,7 @@ ADDHOST=false
 cat base/header 
 . source/client.sh 2>&1
 [[ $(grep -c "$MANHOST" tmp/management_clients) -eq 0 ]] && ADDHOST=true
-cat base/nav|sed "s/screen1/green/g"
+cat base/nav|sed "s/calm screen1/dcalm/g"
 if [[ "$ADDHOST" == "true" ]]
 then
 	echo "<table align=\"center\"><tr><td class=\"instruction\">Add $MANHOSTUC to Management Clients?"

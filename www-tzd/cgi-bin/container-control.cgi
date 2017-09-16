@@ -5,7 +5,7 @@ source source/functions.sh
 . tmp/globals
 [[ -f tmp/containers ]] && rm -f tmp/containers
 cat base/header 
-cat base/nav|sed "s/screen3/green/g"
+cat base/nav|sed "s/calm screen3/dcalm/g"
 
 docker ps -a --format "{{.Names}} ({{.Image}}) {{.Status}}" > tmp/containers
 CONTAINERCOUNT=$(wc -l tmp/containers|cut -d " " -f1)

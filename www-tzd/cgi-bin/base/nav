@@ -1,10 +1,10 @@
 <nav><table align="center">
 <tr>
 
-<td><input type="button" class="nav yellow screen1" onclick="location.href='/cgi-bin/summary.cgi';" value="Home"></td>
-<td><input type="button" class="nav yellow screen2" onclick="location.href='/cgi-bin/image-run.cgi';" value="Images"></td>
-<td><input type="button" class="nav yellow screen3" onclick="location.href='/cgi-bin/container-control.cgi';" value="Containers"></td>
-<td><input type="button" class="nav yellow screen4" onclick="location.href='/cgi-bin/system.cgi';" value="System"></td>
+<td><input type="button" class="nav calm screen1" onclick="location.href='/cgi-bin/summary.cgi';" value="Home"></td>
+<td><input type="button" class="nav calm screen2" onclick="location.href='/cgi-bin/image-run.cgi';" value="Images"></td>
+<td><input type="button" class="nav calm screen3" onclick="location.href='/cgi-bin/container-control.cgi';" value="Containers"></td>
+<td><input type="button" class="nav calm screen4" onclick="location.href='/cgi-bin/system.cgi';" value="System"></td>
 </td>
 </table>
 <table width="100%">

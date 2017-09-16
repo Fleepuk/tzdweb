@@ -9,9 +9,9 @@ Content-type: text/html
 <body>
 <table class="headertable">
 	<tr>
-		<td class="blue"><img src="/images/tzddocker-left.png" alt="TZD Logo" class="imgheader"></td>
-		<td class="imgheadermid yellow"><img src="/images/tzddocker-mid.png" alt="Header spacer" class="imgheader imgheadermid"></td>
-		<td class="blue"><img src="/images/tzddocker-right.png" alt="TZD DockerLogo" class="imgheader"></td>
+		<td class="calm"><img src="/images/tzddocker-left.png" alt="TZD Logo" class="imgheader"></td>
+		<td class="imgheadermid calm"><img src="/images/tzddocker-mid.png" alt="Header spacer" class="imgheader imgheadermid"></td>
+		<td class="calm"><img src="/images/tzddocker-right.png" alt="TZD DockerLogo" class="imgheader"></td>
 	</tr>
 </table>
 

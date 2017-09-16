@@ -1,21 +1,9 @@
 #!/bin/bash
 
-# reduce selinux
-#setenforce 0
-
-# wait for docker service to be up before opening firewall ports
-
-#SERVICECHK=$(systemctl is-active docker)
-#while [[ "${SERVICECHK}" != "active" ]]
-#do
-#	sleep 1
-#	SERVICECHK=$(systemctl is-active docker)
-#done
-#unset SERVICECHK
 [[ ! -f /var/www/cgi-bin/tmp ]] && mkdir /var/www/cgi-bin/tmp && chmod 777 /var/www/cgi-bin/tmp
 . /var/www/cgi-bin/bin/config.sh
 . /var/www/cgi-bin/bin/networking.sh
-. /var/www/cgi-bin/bin/dockerhub.sh
+#. /var/www/cgi-bin/bin/dockerhub.sh
 . /var/www/cgi-bin/bin/zfs-status.sh
 . /var/www/cgi-bin/tmp/globals
 [[ "$SCRIPTSDIR" == "" ]] && SCRIPTSDIR=/mnt/hgfs && write_global SCRIPTSDIR
@@ -28,5 +16,3 @@ then
 	write_global TZDPASS
 fi
 cd /var/www
-git pull tzddocker master > /dev/null
-
